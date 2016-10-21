@@ -1,91 +1,68 @@
 /* color palette
-#3b5998	(59,89,152)
-#8b9dc3	(139,157,195)
-#dfe3ee	(223,227,238)
-#f7f7f7	(247,247,247)
-#ffffff	(255,255,255)*/
+ * #3b5998	(59,89,152)
+ * #8b9dc3	(139,157,195)
+ * #dfe3ee	(223,227,238)
+ * #f7f7f7	(247,247,247)
+ * #ffffff	(255,255,255)
+ * #00b8ff
+ * #bd00ff
+ * #d600ff
+ *
+ *
+ *
+ *
+ *
+ *
+ */
 
-.outer {
-  display: table;
-  position: absolute;
-  height: 99%;
-  width: 99%;
-  background: radial-gradient(transparent, #f7f7f7);
+/* main body */
+html, body {
+  margin: 0%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.middle {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.inner {
-  margin-left: auto;
-  margin-right: auto;
+/* fancy outline */
+.outline {
+  background: linear-gradient(30deg, #03A9F4 0%, #9C27B0 100%);
+  padding: 5px;
+  height: 220px;
+  width: 420px;
+  margin: auto;
 }
 
 .box {
-  width:400px;
-  height:200px;
-  background:#f7f7f7;
-  margin: auto auto;
-}
-
-.effect {
-  position: relative;
-}
-
-.effect:before, .effect:after {
-  z-index: -1;
-  position: absolute;
-  content: "";
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  top: 80%;
-  max-width:300px;
-  background: #777;
-  -webkit-box-shadow: 0 15px 10px #777;
-  -moz-box-shadow: 0 15px 10px #777;
-  box-shadow: 0 15px 10px #777;
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-}
-
-.effect:after {
-  -webkit-transform: rotate(3deg);
-  -moz-transform: rotate(3deg);
-  -o-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  transform: rotate(3deg);
-  right: 10px;
-  left: auto;
+  background-color: white;
+  font-family: helvetica;
+  height: 220px;
+  width: 420px;
 }
 
 .content {
-  padding-top: 25px;
+  background: linear-gradient(30deg, #03A9F4 0%, #9C27B0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.box h1 {
-  font-family: helvetica;
-  font-size: 300%;
+/* title text */
+.content h1 {
+  text-align: center;
+  font-size: 60px;
   font-weight: normal;
-  color: #3b5998;
-  text-shadow: 0 0 15px white;
-  text-align: center;
-  margin-bottom: 0px;
+  margin-top: 0;
 }
 
-.box p {
-  font-family: helvetica;
-  color: #3b5998;
-  text-shadow: 0 0 15px white;
-  text-align: center;
+/* bottom links */
+.content p {
+  font-size: 20px;
+  text-align-last: justify;
+  padding-top: 75px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
-.box a {
-  color: #3b5998;
+.content a {
   text-decoration: none;
 }
