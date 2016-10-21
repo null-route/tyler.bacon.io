@@ -15,51 +15,52 @@
  *
  */
 
-/* background gradient */
+/* main body */
 html, body {
-  margin: 0;
+  margin: 0%;
   height: 100%;
   width: 100%;
-  background: linear-gradient(330deg, rgba(3,169,244,.5), rgba(156,39,176,.5));
   display: flex;
   align-items: center;
 }
 
-/* middle bar for content */
-.middle {
-  height:200px;
-  width: 100%;
-  background:#f7f7f7;
+/* fancy outline */
+.outline {
+  background: linear-gradient(30deg, #03A9F4 0%, #9C27B0 100%);
+  padding: 5px;
+  height: 220px;
+  width: 420px;
+  margin: auto;
 }
 
-/* actual text and stuff */
-.content {
+.box {
+  background-color: white;
   font-family: helvetica;
-  height:200px;
-  width: 600px;
-  margin: auto auto;
+  height: 220px;
+  width: 420px;
 }
 
-/* header text */
+.content {
+  background: linear-gradient(30deg, #03A9F4 0%, #9C27B0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* title text */
 .content h1 {
-  background: linear-gradient(30deg, #03A9F4 0%, #9C27B0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 400%;
+  text-align: center;
+  font-size: 60px;
   font-weight: normal;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
 }
 
+/* bottom links */
 .content p {
-  background: linear-gradient(30deg, #03A9F4 0%, #9C27B0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 150%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 15px;
+  font-size: 20px;
+  text-align-last: justify;
+  padding-top: 75px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .content a {
