@@ -57,7 +57,7 @@ html, body {
 /* bottom links */
 .content p {
   font-size: 20px;
-  text-align-last: justify;
+  text-align: center;
   padding-top: 75px;
   margin-right: 20px;
   margin-left: 20px;
