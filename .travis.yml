@@ -4,7 +4,6 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket: tyler.bacon.io
-  endpoint: tyler.bacon.io.s3-website-us-west-2.amazonaws.com
   region: us-west-2
   skip_cleanup: true
   acl: public_read
