@@ -1,63 +1,130 @@
-/* main body */
-html, body {
-  margin: 0%;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
+.container {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: inline-block;
+    width: 480px;
+    height: 240px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-/* format fancy outline */
-.outline {
-  background: linear-gradient(30deg, #03A9F4 0%, #9C27B0 100%);
-  padding: 5px;
-  height: 220px;
-  width: 420px;
-  margin: auto;
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+    z-index: 20;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.2);
+    border: 2px solid black;
+    border-radius: 2px;
 }
 
-/* format main content box background */
-.box {
-  background-color: white;
-  font-family: helvetica;
-  height: 220px;
-  width: 420px;
+.card div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
-/* format content text with gradient */
-.content {
-  background: linear-gradient(30deg, #03A9F4 0%, #9C27B0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0px 10px 0px 10px;
-  height: 220px;
+.card .front {
+    background-image: url("images/businesscard.jpg");
+    background-position: center;
 }
 
-/* format title text */
-.content h1 {
-  text-align: center;
-  font-weight: normal;
-  font-size: 60px;
-  margin: 0px;
+.card .back {
+    background: #FFF;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    text-align: left;
 }
 
-/* format bottom links */
-.content p {
-  text-align: justify;
-  font-weight: bold;
-  font-size: 20px;
-  padding-top: 118px;
-  margin: 0px;
+input {
+    display: none;
 }
 
-/* text-align: justify hack for full width */
-p:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
+#flipper:checked ~ .card {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    box-shadow: 10px -10px 10px rgba(0,0,0,.2);
 }
 
-/* remove default link formatting */
-.content a {
-  text-decoration: none;
+#flipper:hover ~ .card {
+    transform: rotateX(10deg) scale(1.05);
+    -webkit-transform: rotateX(10deg) scale(1.05);
+    box-shadow: 10px 20px 20px rgba(0,0,0,.2);
+
+}
+
+#flipper:hover:checked ~ .card {
+    transform: rotateX(190deg) scale(1.05);
+    -webkit-transform: rotateX(190deg) scale(1.05);
+    box-shadow: 10px -20px 20px rgba(0,0,0,.2);
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+
+.btn img {
+    height: 40px;
+    width: 40px;
+}
+
+nav ul {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 4px 4px 0px 4px;
+    text-decoration: none;
+}
+
+.avatar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.intro {
+    font-family: monospace;
+    text-align: center;
 }
