@@ -5,18 +5,39 @@
   <title>tyler.bacon.io</title>
 </head>
 <body>
-  <div class="outline">
-    <div class="box">
-      <div class="content">
-        <h1>[tyler.<strong>bacon</strong>.io]</h1>
-        <p>
-          <a href="mailto:tyler@bacon.io">[mail]</a>
-          <a href="pubkey.txt" target="_blank">[gpgkey]</a>
-          <a href="tel:+1-207-459-9338">[signal]</a>
-          <a href="https://github.com/null-route" target="_blank">[github]</a>
-          <a href="https://www.linkedin.com/in/tylerjbacon/" target="_blank">[linkedin]</a>
-        </p>
+  <div class="container">
+    <!-- input needs to be placed on the same level as divs
+         in order to allow property changes and transforms -->
+    <input id="flipper" type="checkbox"/>
+    <div class="card">
+      <div class="front">
+        <div class="depthPlane"></div>
+          <div class="contentPlane">
+            <div class="content">
+              <img src="images/businesscard.png"/>
+            </div>
+          </div>
       </div>
+      <div class="back">
+        <div class="depthPlane"></div>
+        <div class="contentPlane">
+          <div class="content">
+            <p class="avatar"><img src="images/avatar.jpg"/></p>
+            <p class="intro">(not really. just a kid with a computer.)</p>
+            <nav>
+              <ul>
+                <li><a href="mailto:tyler@bacon.io"><img src="images/mail.svg"/></a></li>
+                <li><a href="pubkey.txt" target="_blank"><img src="images/lock.svg"/></a></li>
+                <li><a href="tel:+1-207-459-9338"><img src="images/message-circle.svg"/></a></li>
+                <li><a href="https://github.com/null-route" target="_blank"><img src="images/github.svg"/></a></li>
+                <li><a href="https://www.linkedin.com/in/tylerjbacon/" target="_blank"><img src="images/linkedin.svg"/></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label for="flipper" class="button"><img src="images/chevrons-up.svg"/></label>
     </div>
   </div>
 </body>

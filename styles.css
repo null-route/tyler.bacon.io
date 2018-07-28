@@ -1,63 +1,120 @@
-/* main body */
-html, body {
-  margin: 0%;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
+/* general card styles and animations */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 240px;
+    width: 480px;
+    margin-top: -120px;
+    margin-left: -240px;
+    float: left;
+    text-align: center;
 }
 
-/* format fancy outline */
-.outline {
-  background: linear-gradient(30deg, #03A9F4 0%, #9C27B0 100%);
-  padding: 5px;
-  height: 220px;
-  width: 420px;
-  margin: auto;
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
 }
 
-/* format main content box background */
-.box {
+.front, .back {
+  position: absolute;
+  height: 236px;
+  width: 476px;
   background-color: white;
-  font-family: helvetica;
-  height: 220px;
-  width: 420px;
+  transform: translateZ(5px);
+  border: 2px solid black;
+  border-radius: 3px;
+  transform-style: preserve-3d;
 }
 
-/* format content text with gradient */
-.content {
-  background: linear-gradient(30deg, #03A9F4 0%, #9C27B0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0px 10px 0px 10px;
-  height: 220px;
+.back {
+    transform: rotateX(180deg) rotateZ(180deg);
 }
 
-/* format title text */
-.content h1 {
-  text-align: center;
-  font-weight: normal;
-  font-size: 60px;
-  margin: 0px;
+.depthPlane {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 220px;
+    width: 460px;
+    margin-top: -111px;
+    margin-left: -231px;
+    float: left;
+    border: 1px solid black;
+    border-radius: 3px;
+    transform: translateZ(30px);
 }
 
-/* format bottom links */
-.content p {
-  text-align: justify;
-  font-weight: bold;
-  font-size: 20px;
-  padding-top: 118px;
-  margin: 0px;
+.front .contentPlane {
+    padding-top: 20px;
 }
 
-/* text-align: justify hack for full width */
-p:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
+.contentPlane {
+    position: absolute;
+    height: 236px;
+    width: 476px;
+    transform: translateZ(100px) scale(.915);
 }
 
-/* remove default link formatting */
-.content a {
-  text-decoration: none;
+/* checkbox animation controls */
+#flipper {
+    display: none;
+}
+
+#flipper:checked ~ .card {
+    transform: rotateX(180deg) rotateZ(180deg);
+}
+
+/* label (ctrl button) styles */
+.button {
+    display: inline-block;
+    margin-top: 40px;
+    transition: all .5s ease;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.button img {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+/* back of card info */
+nav ul {
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 4px 4px 0px 4px;
+    text-decoration: none;
+}
+
+.avatar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.intro {
+    font-family: monospace;
+    text-align: center;
 }
