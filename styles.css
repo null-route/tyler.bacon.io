@@ -20,14 +20,14 @@
 }
 
 .front, .back {
-  position: absolute;
-  height: 236px;
-  width: 476px;
-  background-color: white;
-  transform: translateZ(5px);
-  border: 2px solid black;
-  border-radius: 3px;
-  transform-style: preserve-3d;
+    position: absolute;
+    height: 236px;
+    width: 476px;
+    background-color: white;
+    transform: translateZ(5px);
+    border: 2px solid black;
+    border-radius: 3px;
+    transform-style: preserve-3d;
 }
 
 .back {
