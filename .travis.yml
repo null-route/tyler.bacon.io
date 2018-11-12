@@ -11,6 +11,7 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   bucket: tyler.bacon.io
   skip_cleanup: true
+  region: us-west-2
   acl: public_read
 after_deploy:
   - aws configure set preview.cloudfront true
