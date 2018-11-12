@@ -1,19 +1,17 @@
 language: python
 python:
   - "3.5"
-cache: pip
 install:
   - pip install awscli
 deploy:
+  on:
+    branch: master
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket: tyler.bacon.io
-  region: us-west-2
   skip_cleanup: true
   acl: public_read
-  on:
-    branch: master
 after_deploy:
   - aws configure set preview.cloudfront true
   - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "*"
