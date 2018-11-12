@@ -2,10 +2,8 @@ language: python
 python:
   - "3.5"
 install:
-  - pip install --user awscli
+  - pip install awscli
 deploy:
-  on:
-    branch: master
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
