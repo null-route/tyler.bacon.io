@@ -5,8 +5,8 @@ cache: pip
 install:
   - pip install awscli
 script:
-  echo "script: what is my purpose?"
-  echo "me: you satisfy travis build template requirements."
+  - echo "script: what is my purpose?"
+  - echo "me: you satisfy travis build template requirements."
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
