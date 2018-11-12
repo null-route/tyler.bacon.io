@@ -3,6 +3,8 @@ python:
   - "3.5"
 install:
   - pip install awscli
+script:
+    echo "foo"
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
